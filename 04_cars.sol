@@ -36,7 +36,6 @@ contract Cars {
         km        = cars[msg.sender].km;
     }
 
-    
     function countIdentifiers() external view returns(uint256) {
         return identifiers.length;
     }
