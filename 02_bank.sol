@@ -13,11 +13,11 @@ contract Bank {
         owner = msg.sender;
     }
 
-    function getBalance() public returns(uint256) {
+    function getBalance() view public returns(uint256) {
         return address(this).balance;
     }
 
-    function getOwner() public returns(address) {
+    function getOwner() view public returns(address) {
         return owner;
     }
 
@@ -25,8 +25,8 @@ contract Bank {
         require(msg.value == amount);
     }
 
-    function newOwner(address newOwner) public onlyOwner{
-        owner = newOwner;
+    function newOwner(address _newOwner) public onlyOwner{
+        owner = _newOwner;
     }
 
     function withdrawBalance() public onlyOwner {
