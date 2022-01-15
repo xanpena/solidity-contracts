@@ -7,6 +7,7 @@ contract Bank {
 
     modifier onlyOwner {
         require(msg.sender == owner);
+        _;
     }
 
     function Bank() payable public {
