@@ -22,7 +22,7 @@ contract Cars {
         price = _price;
     }
 
-    function addCar(uint256 _id, string memory _trademark, uint32 _horses, uint32 km) external filterPrice(msg.value) payable {
+    function addCar(uint256 _id, string memory _trademark, uint32 _horses, uint32 km) public filterPrice(msg.value) payable {
         identifiers.push(_id);
         cars[msg.sender].identifier = _id;
         cars[msg.sender].trademark  = _trademark;
