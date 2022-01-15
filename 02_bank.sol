@@ -9,16 +9,20 @@ contract Bank {
         require(msg.sender == owner);
     }
 
-    function newOwner(address newOwner) public onlyOwner{
-        owner = newOwner;
-    }
-
     function Bank() payable public {
         owner = msg.sender;
     }
 
+    function getOwner() public returns(address) {
+        return owner;
+    }
+
     function incrementBalance(uint256 amount) payable public {
         require(msg.value == amount);
+    }
+
+    function newOwner(address newOwner) public onlyOwner{
+        owner = newOwner;
     }
 
     function withdrawBalance() public onlyOwner {
