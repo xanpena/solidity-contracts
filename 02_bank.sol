@@ -13,6 +13,10 @@ contract Bank {
         owner = msg.sender;
     }
 
+    function getBalance() public returns(uint256) {
+        return address(this).balance;
+    }
+
     function getOwner() public returns(address) {
         return owner;
     }
