@@ -5,6 +5,10 @@ contract Bank {
 
     address owner;
 
+    modifier onlyOwner {
+        require(msg.sender == owner);
+    }
+
     function Bank() payable public {
         owner = msg.sender;
     }
@@ -13,8 +17,7 @@ contract Bank {
         require(msg.value == amount);
     }
 
-    function withdrawBalance() public {
-        require(msg.sender == owner);
+    function withdrawBalance() public onlyOwner {
         msg.sender.transfer(address(this).balance);
     }
 }
