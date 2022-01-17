@@ -13,3 +13,4 @@ Solidity Contracts
 - EIP-1193 - https://eips.ethereum.org/EIPS/eip-1193
 - Ropsten Ethereum Faucet - https://faucet.ropsten.be/
 - Truffle - https://trufflesuite.com/
+- Ethereumjs-tx - https://github.com/ethereumjs/ethereumjs-tx
