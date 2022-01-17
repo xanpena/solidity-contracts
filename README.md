@@ -14,3 +14,5 @@ Solidity Contracts
 - Ropsten Ethereum Faucet - https://faucet.ropsten.be/
 - Truffle - https://trufflesuite.com/
 - Ethereumjs-tx - https://github.com/ethereumjs/ethereumjs-tx
+- ETH GAS STATION - https://ethgasstation.info/
+- Eth converter - https://eth-converter.com/
